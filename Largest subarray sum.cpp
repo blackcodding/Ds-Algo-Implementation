@@ -29,7 +29,7 @@ int largestSubarraySum2( int arr[], int n)
     int largestSum = 0;
     for(int i=0; i<n; i++){
         for(int j=i; j<n; j++){
-            int subArraySum = i>0 ? prefixSum[j] - prefixSum[i-1] : prefixSum[j]; // to compute the subarray sum
+            int subArraySum = i>0 ? prefixSum[j] - prefixSum[i-1] : prefixSum[j]; // compute the subarray sum
             largestSum = max(largestSum, subArraySum);
         }
     }
