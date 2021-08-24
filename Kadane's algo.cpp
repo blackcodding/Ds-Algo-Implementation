@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// Using Kadane's Algo we find out the maximum subArray sum , Time omplexity = o(n)
+// Using Kadane's Algo we find out the maximum subArray sum , Time complexity = o(n)
 int maximum_subArraySum(int arr[], int n)
 {
     int currentSum = 0;
