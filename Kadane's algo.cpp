@@ -2,7 +2,7 @@
 using namespace std;
 
 // Using Kadane's Algo we find out the maximum subArray sum , Time complexity = o(n)
-int maximum_subArraySum(int arr[], int n)
+/*int maximum_subArraySum(int arr[], int n)
 {
     int currentSum = 0;
     int maximumSum =0;
@@ -14,7 +14,21 @@ int maximum_subArraySum(int arr[], int n)
         maximumSum = max(maximumSum, currentSum);
     }
     return maximumSum;
-}
+}*/
+
+// Standard code for all negetive elements or all positive elements or combination of both positive and negetive elements in array .
+int maxSubarraySum(int arr[], int n){
+        int cs = 0;
+        int ms = INT_MIN;
+        for(int i=0; i<n; i++){
+            cs = cs + arr[i];
+            ms = cs > ms ? cs : ms;
+            if(cs<0){
+               cs = 0;
+            }
+        }
+        return ms;
+    }
 
 int main()
 {
