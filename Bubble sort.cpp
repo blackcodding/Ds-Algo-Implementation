@@ -1,7 +1,9 @@
 #include<iostream>
 using namespace std;
 
+//Bubble sort involved in (n-1) iteration
 //Bubble sort time complexity = o(n^2)
+
 void bubblesort(int arr[], int n)
 {
     for(int times=1; times<n; times++){
